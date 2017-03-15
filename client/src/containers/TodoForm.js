@@ -19,7 +19,7 @@ class TodoForm extends Component {
               className="form-control"
               type="number"
               value={form.order}
-              onChange={(e) => changeOrder(e.target.value)} 
+              onChange={(e) => changeOrder(e.target.value)}
             />
           </div>
           <div className="form-group col-md-8">
@@ -27,7 +27,7 @@ class TodoForm extends Component {
               className="form-control"
               type="text"
               value={form.title}
-              onChange={(e) => changeTitle(e.target.value)} 
+              onChange={(e) => changeTitle(e.target.value)}
             />
           </div>
           <div className="form-group col-md-2">
@@ -36,7 +36,7 @@ class TodoForm extends Component {
               type="submit"
               disabled={form.disabled}
               onClick={() => onAddTodo(form)}>
-              登録
+              Submit
             </button>
           </div>
         </form>

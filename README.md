@@ -1,41 +1,58 @@
-# Todo App (Rails5 API and React Redux)
+# TodoMVC App (Rails 5 API + React + Redux)
 
-This application is simple Todo.
+## General
 
-- Client: React + Redux (start with create-react-app)
-- Server: Rails5 API
+This application is simple TodoMVC-style app (forked from https://github.com/kogoto/rails5-react-redux-todo with simple word/phrase translations to English). It is meant to be a boilerplate application to build off of, using Rails 5 API alongside React + Redux for the frontend (via create-react-app).
 
-## Implementation Flow
+## Instructions
 
-1. Add Todo API on Rails5.
-2. Add Todo Client with React.
-3. Convert from react to react-redux. (No api access)
-4. Update client to access Web API.
+We'll be using this repo as the basis for a few exercises when you come in.
 
-## How to launch
+You will need to fork this repo and clone it to your local dev machine, ensure the environment works properly, check to make sure everything starts up properly, and get comfortable with the code base. Feel free to modify the code base as needed to suit your preferences/style.
 
-Go to rails root folder and install gems, then start server.
+## Setup
+
+Fork and clone the app:
 
 ```bash
+$ git clone https://github.com/huyhong/rails5-react-redux-todo.git
+(^ this should be your fork's url)
 $ cd rails5-react-redux-todo
-$ bundle install --path vendor/bundle
-$ rails db:migrate
-$ rails s -p 8000
-=> Booting Puma
-=> Rails 5.0.0 application starting in development on http://localhost:8000
-=> Run `rails server -h` for more startup options
-Puma starting in single mode...
 ```
 
- Open anather console, go to client folder and install node modules, then start server.
+For Ruby deps (using Ruby 2.3.1 and up) and Rails:
+
+```bash
+$ bundle install --path vendor/bundle
+$ rails db:migrate
+```
+
+For Node deps (using Node 6.x and up) and Webpack:
 
 ```bash
 $ cd ./client
 $ npm install
-$ npm start
-Compiled successfully!
-
-The app is running at http://localhost:3000/
 ```
 
-**notice** *For launching the two server, you should assign different port to each server.*
+## Development
+
+In one console window, run the Rails dev server (API hosted on port `8000`):
+
+```bash
+$ rails s -p 8000
+=> Booting Puma
+=> Rails 5.0.0 application starting in development on http://localhost:8000
+=> Run `rails server -h` for more startup options
+=> Puma starting in single mode...
+```
+
+In another terminal window, run the Webpack server (client hosted on port `3000`):
+
+```bash
+$ cd ./client
+$ npm start
+=> Compiled successfully!
+=> The app is running at http://localhost:3000/
+```
+
+Go to (http://localhost:3000) to see the running app.

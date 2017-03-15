@@ -14,7 +14,7 @@ class TodoList extends Component {
           todo={todo}
           onUpdate={this.props.onUpdateTodo.bind(this)}
           onDelete={this.props.onDeleteTodo.bind(this)}
-        /> 
+        />
       )
     })
 
@@ -23,9 +23,9 @@ class TodoList extends Component {
         <table className="table table-striped">
           <thead>
             <tr>
-              <th width="10%">完了</th>
-              <th width="20%">優先順位</th>
-              <th>やること</th>
+              <th width="10%">Finished</th>
+              <th width="20%">Priority</th>
+              <th>Things to do</th>
               <th width="20%"></th>
             </tr>
           </thead>
